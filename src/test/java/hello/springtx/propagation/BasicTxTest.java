@@ -83,7 +83,7 @@ public class BasicTxTest {
 
         log.info("내부 트랜잭션 시작");
         TransactionStatus inner = transactionManager.getTransaction(new DefaultTransactionAttribute());
-        log.info("inner.isNewTransaction {} ", inner.isNewTransaction()); //처음 진행된 트랜잭션 체크
+        log.info("inner.isNewTransaction {} ", inner.isNewTransaction());
 
         log.info("내부 트랜잭션 커밋");
         transactionManager.commit(inner);
